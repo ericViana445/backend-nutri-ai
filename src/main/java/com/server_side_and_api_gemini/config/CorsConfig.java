@@ -19,7 +19,9 @@ public class CorsConfig implements WebMvcConfigurer {
                         "http://localhost:3000",      // Frontend local (porta 3000)
                         "http://localhost:5173",      // Vite dev server
                         "http://127.0.0.1:3000",
-                        "http://127.0.0.1:5173"
+                        "http://127.0.0.1:5173",
+                        "http://127.0.0.1:5173",
+                        "https://backend-nutri-ai-production.up.railway.app"
                         // Adicione aqui o domínio do seu frontend em produção
                         // "https://seu-dominio-frontend.com"
                 )
