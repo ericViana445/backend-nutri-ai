@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("nutriForm");
   const btnSalvar = document.getElementById("btnSalvar");
   const abrirCameraBtn = document.getElementById("abrirCamera");
+  const BASE_URL = "https://backend-nutri-ai-production.up.railway.app";
 
   function idadeParaDataNascimento(idadeAnos) {
     const hoje = new Date();
