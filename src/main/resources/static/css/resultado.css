@@ -1,0 +1,167 @@
+:root {
+--verde_claroo: rgb(235, 240, 235);
+--verde: #3B7D59;
+--verde_medio:#1a4b2f;
+--verde_musgo: #819989;
+--laranja: #E47A3D;
+--bege: #F8F5F2;
+--texto: #1F2E1E;
+--cinza: #DADADA;
+--preto_claro: #373739;
+--cinza_medio:#4d4d4d;
+}
+
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: var(--verde_claroo);
+}
+
+.container {
+max-width: 800px;
+margin: 40px auto;
+margin-top: 10%;
+background: var(--bege);
+padding: 30px;
+border-radius: 15px;
+box-shadow: 0 0 15px rgba(0,0,0,0.1);
+border: 2px solid var(--verde);
+}
+
+.header {
+text-align: center;
+margin-bottom: 30px;
+}
+
+.logo {
+width: 120px;
+}
+
+h1{
+    color:var(--verde);
+}
+
+.subtitle {
+display: block;
+font-size: 18px;
+color: var(--cinza_medio);
+}
+
+.result-box, .history-box {
+margin-top: 25px;
+}
+
+.result-item {
+display: flex;
+justify-content: space-between;
+padding: 10px 0;
+border-bottom: 1px solid #e0e0e0;
+}
+
+.result-item label {
+font-weight: bold;
+}
+
+#historicoLista {
+margin-top: 10px;
+}
+
+.history-item {
+padding: 10px;
+border: 1px solid #dcdcdc;
+border-radius: 8px;
+margin-bottom: 12px;
+background-color: #fafafa;
+}
+
+.buttons {
+margin-top: 30px;
+text-align: center;
+}
+
+.btn {
+padding: 10px 20px;
+background: #0a7b70;
+color: white;
+border-radius: 8px;
+text-decoration: none;
+margin-right: 10px;
+transition: 0.2s;
+}
+
+.btn:hover {
+background: #0d9c8d;
+}
+
+.btn.secondary {
+background: transparent;
+color: var(--preto_claro);
+border: 2px solid var(--laranja);
+}
+
+.btn.secondary:hover {
+background: var(--laranja);
+color: var(--cinza);
+}
+
+@media (max-width: 768px) {
+
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+  }
+
+  .logo {
+    width: 90px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+    word-break: break-word;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    margin-top: 5px;
+    word-break: break-word;
+  }
+
+  
+  .result-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .result-item label {
+    font-size: 0.95rem;
+  }
+
+  
+  .history-item {
+    font-size: 0.95rem;
+    word-break: break-word;
+  }
+
+  
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+}

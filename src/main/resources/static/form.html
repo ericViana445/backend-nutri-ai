@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutri A.I - Inserção de Dados</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="form-container">
+    <header class="form-header">
+      <div class="form-logo-area">
+        <img src="css/images/logo.png" alt="Nutri A.I" class="form-logo">
+        <div class="form-title">
+          <h1>Nutri A.I</h1>
+          <p>Avaliação Nutricional Inteligente</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="form-content">
+      <h2>Preencha as informações do paciente abaixo:</h2>
+
+      <form id="nutriForm">
+        <!-- Nome -->
+        <div class="form-group">
+          <img class="img_group" src="css/images/Menina.png" alt="Nome">
+
+          <div class="bloco-campos">
+            <label for="nome"> Nome:</label>
+            <input type="text" id="nome" placeholder="Digite o nome do(a) paciente" required>
+          </div>
+        </div>
+
+        <!-- Idade -->
+        <div class="form-group">
+          <img class="img_group" src="css/images/Idade.png" alt="Idade">
+
+          <div class="bloco-campos">
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" placeholder="Digite a idade do(a) paciente" required>
+          </div>
+        </div>
+
+        <!-- Gênero -->
+        <div class="form-group">
+          <img class="img_group" src="css/images/genero.png" alt="genero">
+
+        <div class="bloco-campos_group_button">
+  <label for="genero">Gênero:</label>
+
+  <select id="genero" name="genero">
+    <option value="">Selecione</option>
+    <option value="M">Masculino</option>
+    <option value="F">Feminino</option>
+  </select>
+        </div>
+</div>
+
+        <!-- Foto -->
+<div class="form-group">
+  <img class="img_group" src="css/images/camera.png" alt="camera">
+
+  <div class="bloco-campos_group_button">
+    <label>Registrar Foto do(a) Paciente:</label>
+    <button type="button" class="btna green_form" id="abrirCamera">Abrir Câmera
+    </button>
+  </div>
+</div>
+
+<!--  camera (tela cheia) -->
+<div id="cameraModal" style="display:none;">
+  <button id="fecharCamera">✕</button>
+
+  <video id="camera" autoplay playsinline></video>
+  <button id="tirarFoto"></button>
+  <canvas id="fotoCanvas" style="display:none;"></canvas>
+</div>
+
+<!-- input  -->
+<input type="file" id="foto" accept="image/*" style="display:none;">
+
+
+        <!-- Peso -->
+        <div class="form-group">
+          <img class="img_group" src="css/images/Peso.png" alt="Peso">
+
+          <div class="bloco-campos_group_button">
+            <label> Registre o peso:</label>
+            <input id="pesoInput" placeholder="Esperando resultados">
+          </div>
+        </div>
+
+        <!-- Altura -->
+        <div class="form-group">
+          <img class="img_group" src="css/images/Altura.png" alt="Altura">
+
+          <div class="bloco-campos_group_button">
+            <label>Registre a altura:</label>
+            <input id="alturaInput" placeholder="Esperando resultados">
+            <button id="connect" class="btna green_form">Conectar Sensor</button>
+          </div>
+        </div>
+
+        <!-- Edema , só para evitar erro no JS) -->
+        <input type="checkbox" id="edema" style="display:none;">
+
+        <div class="buttons_form">
+          <a href="index.html" class="btna orange_form">Voltar ao Inicio</a>
+          <button type="submit" class="btna green_salvar">Salvar Dados</button>
+        </div>
+
+      </form>
+    </main>
+  </div>
+  <script src="js/sensor.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

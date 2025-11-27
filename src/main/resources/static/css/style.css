@@ -1,0 +1,504 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --verde_claroo: rgb(235, 240, 235);
+  --verde: #3B7D59;
+  --verde_medio:#1a4b2f;
+  --verde_musgo: #819989;
+  --laranja: #E47A3D;
+  --bege: #F8F5F2;
+  --texto: #1F2E1E;
+  --cinza: #DADADA;
+  --preto_claro: #373739;
+  --cinza_medio:#4d4d4d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color:  var(--verde_claroo);
+  color: var(--texto);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.home-container {
+  background-color: white;
+  border-radius: 16px;
+  border:2.5px solid #B1D3BD;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  width: 85%;
+  max-width: 600px;
+  padding: 2rem;
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(70px);
+  animation: subirBox 1.3s ease-out forwards;
+}
+
+@keyframes subirBox {
+  from {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-subtitle_segundo{
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+.home-logo {
+  width: 128px;
+}
+
+.home-title {
+  color: var(--verde);
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.home-subtitle {
+  color: var(--preto_claro);
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.6rem 1.5rem;
+  margin: 2.7rem 2.5rem 0 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+  
+}
+
+.btn.green {
+  background-color: var(--verde);
+  color: var(--bege);
+}
+
+.btn.green:hover {
+  background-color: var(--verde_medio);
+  color: var(--cinza);
+}
+
+.btn.orange {
+  background-color: transparent;
+  color: var(--preto_claro);
+  border: 1px solid var(--laranja);
+}
+
+.btn.orange:hover {
+  background-color:#cc6631;
+}
+
+
+    /* Tela Form */
+
+.form-container {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  width: 85%;
+  max-width: 990px;
+  padding: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--bege);
+  padding-bottom: 1rem;
+}
+
+.form-logo-area {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form-logo {
+  width: 100px;
+}
+
+.form-title h1 {
+  color: var(--verde);
+  font-size: 1.5rem;
+}
+
+.form-title p {
+  color: #4d4d4d;
+  font-size: 0.9rem;
+}
+
+.form-user-info {
+  color: var(--verde);
+  font-weight: 600;
+}
+
+.form-content {
+  margin-top: 2rem;
+}
+
+.form-content h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  color: var(--verde);
+}
+
+.form-group {
+  margin-top: 1.2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+
+.img_group{
+  width: 42px;
+  height: 42px;
+  margin-top: 18px;
+}
+
+.bloco-campos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+}
+
+.bloco-campos input {
+    width: 100%;
+    height: 42px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 8px 10px;
+}
+
+.bloco-campos_group_button{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.bloco-campos_group_button .btna{
+  width: auto;
+  align-self: flex-start;
+}
+
+input {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid var(--cinza);
+  font-size: 1rem;
+}
+
+.buttons_form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 3.5rem;
+}
+
+.btna{
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+  /* margin-bottom: 1rem; */
+  margin-right: 1rem;
+}
+
+.orange_form{
+  background-color: var(--laranja);
+  color: white;
+}
+
+.btna.orange_form:hover {
+background-color: transparent;
+color: var(--cinza_medio);
+border: 1px solid var(--laranja);
+}
+
+.green_salvar{
+background-color: var(--verde);
+color: var(--bege);
+padding: 1.4%;
+}
+
+.btna.green_salvar:hover{
+  background-color: var(--verde_medio);
+  color: var(--cinza);
+}
+
+.green_form {
+  background-color: var(--verde);
+  color: var(--bege);
+}
+
+.btna.green_form:hover {
+  background-color: var(--verde_medio);
+  color: var(--cinza);
+}
+
+
+/* Pré-visualização da câmera */
+/* .preview-area {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+} */
+
+#camera {
+  border-radius: 12px;
+  width: 320px;
+  height: 240px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .form-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+    align-items:stretch;
+  }
+}
+
+
+.bloco-campos_group_button select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* seta do select */
+
+.bloco-campos_group_button select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23666'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 5px center;
+  background-position: top 7px right;
+}
+
+.bloco-campos_group_button select option {
+  list-style: none;
+}
+
+
+#alturaInput{
+  margin-bottom: 7px;
+}
+
+/* tela instrucao */
+.btni{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0.6rem 1.5rem;
+  margin: 2.7rem auto 0 auto;
+  
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.green_instr {
+  background-color: var(--verde);
+  color: var(--bege);
+}
+
+.btni.green_instr:hover{
+  background-color: var(--verde_medio);
+}
+
+.home-butooon{
+  display: flex;
+  justify-content: center;
+}
+
+.home-container_intr{
+  background-color: white;
+  border-radius: 16px;
+  border:2.5px solid #B1D3BD;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  width: 85%;
+  max-width: 700px;
+  padding: 2rem;
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(70px);
+  animation: subirBox 1.3s ease-out forwards;
+}
+
+
+/* camera */
+#cameraModal {
+  position: fixed;
+  inset: 0;
+  background: black;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cameraModal video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* botão fechar */
+#fecharCamera {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  font-size: 26px;
+  padding: 6px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* botão tirar foto */
+#tirarFoto {
+  position: absolute;
+  bottom: 30px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 5px solid white;
+  background: transparent;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+
+  /* Container geral */
+  .form-container {
+    padding: 1rem;
+  }
+
+  /* Cada campo vira coluna */
+  .form-group {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Ícones/imagens */
+  .img_group {
+    width: 55px;
+    height: auto;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Blocos de input */
+  .bloco-campos,
+  .bloco-campos_group_button {
+    width: 100%;
+    align-items: center;
+  }
+
+  /* Labels */
+  label {
+    width: 100%;
+    text-align: left;
+    font-size: 0.95rem;
+    word-break: break-word;
+  }
+
+  /* Inputs e select */
+  input,
+  select {
+    width: 100%;
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  /* Botões */
+  .btna {
+    width: 100%;
+    max-width: 340px;
+    margin: 0.5rem auto;
+  }
+
+  /* Rodapé de botões */
+  .buttons_form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    align-items: center;
+  }
+
+  /* Títulos */
+  h1, h2, p {
+    text-align: center;
+    word-break: break-word;
+  }
+
+}
