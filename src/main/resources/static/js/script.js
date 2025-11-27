@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
           gender: genero
         };
 
-        const salvarPacienteResp = await fetch("/api/v1/patients/create", {
+        const salvarPacienteResp = await fetch(`${BASE_URL}/api/v1/patients/create`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(pacientePayload)
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
         formDataDiag.append("isEdema", String(isEdema));
         if (foto) formDataDiag.append("imageFile", foto, foto.name);
 
-        const diagResp = await fetch("/api/v1/diagnose/run-analysis", {
+        const diagResp = await fetch(`${BASE_URL}/api/v1/diagnose/run-analysis`, {
           method: "POST",
           body: formDataDiag
         });
